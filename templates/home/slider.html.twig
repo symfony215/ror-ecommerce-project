@@ -1,0 +1,25 @@
+<!-- Start Slider -->
+<div id="slides-shop" class="cover-slides">
+    <ul class="slides-container">
+        {% for rs in slider  %}
+            <li class="text-left">
+                <img src="{{ asset('uploads/images/'  ~ rs.image) }}" alt="">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1 class="m-b-20"><strong>Kabin Shop <br> {{ rs.title }}</strong></h1>
+                            <p>{{ rs.description }}</p>
+                            <p><a class="btn hvr-hover" href="{{ path('product_show', {'id': rs.id}) }}">Show Detail</a></p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        {% endfor %}
+
+    </ul>
+    <div class="slides-navigation">
+        <a href="#" class="next"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+        <a href="#" class="prev"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+    </div>
+</div>
+<!-- End Slider -->

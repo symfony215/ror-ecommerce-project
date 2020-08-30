@@ -1,0 +1,20 @@
+CKeditor Installation
+
+https://symfony.com/doc/master/bundles/EasyBundle/integration/ivoryckeditorbundle.html
+
+1. php.ini activate extension=int1
+2. composer require friendsofsymfony/ckeditor-bundle
+3. php bin/console ckeditor:install
+4. php bin/console assets:install --symlink
+5. twig.yam1 ->
+      form_themes:
+      - 'bootstrap_4_horizontal_layout.html.twig'
+      - '@FOSCKEditor/Form/ckeditor_widget.html.twig'
+6. Add Formbuilder code in FormType file >
+   
+    ->add('detail',CKEditorType::class,array(
+        'config' => array (
+        'uiColor'=> '#ffffff',
+            //...
+          ),
+       ))

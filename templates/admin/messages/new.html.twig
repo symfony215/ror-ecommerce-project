@@ -1,0 +1,32 @@
+{% extends 'adminbase.html.twig' %}
+
+{% block title %}New Messages{% endblock %}
+
+{% block body %}
+
+<section role="main" class="content-body">
+    <header class="page-header">
+        <h2>New Messages</h2>
+
+        <div class="right-wrapper pull-right">
+            <ol class="breadcrumbs">
+                <li>
+                    <a href="/admin">
+                        <i class="fa fa-home"></i>
+                    </a>
+                </li>
+                <li><span>New Messages Page</span></li>
+            </ol>
+
+            <a class="sidebar-right-toggle" data-open="sidebar-right"><i class="fa fa-chevron-left"></i></a>
+        </div>
+    </header>
+
+    {{ include('admin/messages/_form.html.twig') }}
+
+    <a href="{{ path('admin_messages_index') }}"class="btn btn-block btn-info">>back to list</a>
+    <!-- start: page -->
+    <!-- end: page -->
+</section>
+
+{% endblock %}

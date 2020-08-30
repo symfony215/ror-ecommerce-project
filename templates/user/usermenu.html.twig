@@ -1,0 +1,17 @@
+<div class="filter-sidebar-left">
+    <div class="title-left">
+        <h3>User Menu</h3>
+        <img src="{{ asset('uploads/images/'~ app.user.image) }}" style="height:50px"class="image-circle">
+        {{ app.user.name }}{{ app.user.surname }}
+    </div>
+    <div class="list-group list-group-collapse list-group-sm list-group-tree" id="list-group-men" data-children=".sub-men">
+        <div class="list-group-collapse sub-men">
+            <a class="list-group-item list-group-item-action" href="/user" aria-expanded="true" aria-controls="sub-men1">My Profile</a>
+            <a class="list-group-item list-group-item-action" href="/user/product" aria-expanded="true" aria-controls="sub-men1">My Products</a>
+            <a class="list-group-item list-group-item-action" href="/user/comments" aria-expanded="true" aria-controls="sub-men1">My Comments</a>
+            <a class="list-group-item list-group-item-action" href="/user/shop" aria-expanded="true" aria-controls="sub-men1">My Shop</a>
+            <a class="list-group-item list-group-item-action" href="/logout" aria-expanded="true" aria-controls="sub-men1">Logout</a>
+
+        </div>
+    </div>
+</div>

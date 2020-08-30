@@ -1,0 +1,75 @@
+{% extends 'adminbase.html.twig' %}
+
+{% block title %}User index{% endblock %}
+
+{% block body %}
+    <SCRIPT language="JavaScript" type="text/javascript">
+        function openWin(windowURL,windowName,windowFeatures){  window.open(windowURL,windowName,windowFeatures);}
+    </SCRIPT>
+    <section role="main" class="content-body">
+        <header class="page-header">
+            <h2>User Index List</h2>
+
+            <div class="right-wrapper pull-right">
+                <ol class="breadcrumbs">
+                    <li>
+                        <a href="/admin">
+                            <i class="fa fa-home"></i>
+                        </a>
+                    </li>
+                    <li><span>User List</span></li>
+                </ol>
+
+                <a class="sidebar-right-toggle" data-open="sidebar-right"><i class="fa fa-chevron-left"></i></a>
+            </div>
+        </header>
+        <div class="col-md-2">
+            <a href="{{ path('admin_user_new') }}" class="btn btn-block btn-success">Create New</a>
+
+        </div><br><br>
+
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Email</th>
+                <th>Roles</th>
+                <th>Name</th>
+                <th>Surname</th>
+                <th>Image</th>
+                <th>Status</th>
+
+                <th>actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for user in users %}
+                <tr>
+                    <td>{{ user.id }}</td>
+                    <td>{{ user.email }}</td>
+                    <td>{{ user.roles ? user.roles|json_encode : '' }}</td>
+                    <td>{{ user.name }}</td>
+                    <td>{{ user.surname }}</td>
+                    <td><img src="{{ asset('uploads/images/'  ~ user.image) }}" height="40" ></td>
+                    <td>{{ user.status }}</td>
+                    <td>
+                        <a href="{{ path('admin_user_show', {'id': user.id}) }}"class="btn btn-block btn-info">Show</a>
+
+                        <a href="{{ path('admin_user_edit', {'id': user.id}) }}"class="btn btn-block btn-info">Edit</a>
+                        {{ include('admin/user/_delete_form.html.twig') }}
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="11">no records found</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+
+    <!-- start: page -->
+    <!-- end: page -->
+</section>
+
+{% endblock %}

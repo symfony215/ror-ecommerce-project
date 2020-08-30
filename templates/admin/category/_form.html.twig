@@ -1,0 +1,81 @@
+<section class="panel" >
+    <header class="panel-heading">
+        <div class="panel-actions">
+            <a href="#" class="fa fa-caret-down"></a>
+            <a href="#" class="fa fa-times"></a>
+        </div>
+
+        <h2 class="panel-title">Form Elements</h2>
+    </header>
+    <div class="panel-body">
+        <form name="category" class="form-horizontal form-bordered" method="get">
+            <div class="form-group">
+                <label class="col-md-3 control-label" for="inputDefault">Parent</label>
+                <div class="col-md-6">
+                    <input type="number" id="category_parentid" name="category[parentid]" class="form-control" id="inputDefault">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-3 control-label" for="inputDefault">Category Name</label>
+                <div class="col-md-6">
+                    <input type="text" id="category_title" name="category[title]" value="{{ category.title }}" class="form-control" id="inputDefault">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-3 control-label" for="inputDefault">Description</label>
+                <div class="col-md-6">
+                    <input type="text" id="category_description" name="category[description]" value="{{ category.description }}" class="form-control" id="inputDefault">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-3 control-label" for="inputDefault">Category Keywords</label>
+                <div class="col-md-6">
+                    <input type="text" id="category_keywords" name="category[keywords]" value="{{ category.keywords }}" class="form-control" id="inputDefault">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-3 control-label"> Image </label>
+                <div class="col-md-6">
+
+                    <div class="fileupload fileupload-new" data-provides="fileupload">
+                        <div class="input-append">
+                            <div class="uneditable-input">
+
+                                <span class="fileupload-preview"></span>
+                            </div>
+                            <span class="btn btn-default btn-file">
+
+
+																<input type="file" id="category_image" name="category[image]" value="{{ category.image }}" class="form-control">
+															</span>
+                            <a href="#" class="btn btn-default fileupload-exists" data-dismiss="fileupload">Remove</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="form-group">
+                <label class="col-md-3 control-label" for="exampleInputPassword1">Status</label>
+                <select class="col-sm"  id="category_status" name="category[status]" class="form-control">
+                    <option> {{ category.status }}</option>
+                    <option> True </option>
+                    <option> False</option>
+
+
+                </select>
+            </div>
+
+            <div class="col-md-4 control-label">
+                <div class="card-footer" >
+                    <button class="btn btn-primary" formmethod="post">Submit</button>
+                </div>
+            </div>
+
+        </form>
+</section>

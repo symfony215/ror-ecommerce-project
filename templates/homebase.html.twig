@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %} Welcome KabinShop!{% endblock %}</title>
+
+        <meta name="description" content="{% block description %}Elden Ele Moda! {% endblock %}">
+        <meta name="keywords" content="{% block keywords %}İkinci El,Alışveriş,Moda{% endblock %}">
+        <meta name="author" content="{% block author %}Gamze Taşkın{% endblock %}">
+
+        {% block head %} {% include('home/head.html.twig') %} {% endblock %}
+        {% block styleesheet %}  {% endblock %}
+    </head>
+    <body>
+
+        {% block header %} {% include('home/header.html.twig') %} {% endblock %}
+        {% block sidebar %}  {% endblock %}
+        {% block slider%}  {% endblock %}
+        {% block body %}{% endblock %}
+        {% block footer %}{% include('home/footer.html.twig') %}{% endblock %}
+        {% block javascripts %} {% include('home/javascripts.html.twig') %}  {% endblock %}
+
+    </body>
+</html>

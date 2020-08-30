@@ -1,0 +1,124 @@
+{% extends 'adminbase.html.twig' %}
+
+{% block title %}Setting{% endblock %}
+
+{% block body %}
+    <section role="main" class="content-body">
+        <header class="page-header">
+            <h2>Setting</h2>
+
+            <div class="right-wrapper pull-right">
+                <ol class="breadcrumbs">
+                    <li>
+                        <a href="/admin">
+                            <i class="fa fa-home"></i>
+                        </a>
+                    </li>
+                    <li><span>Setting</span></li>
+                </ol>
+
+                <a class="sidebar-right-toggle" data-open="sidebar-right"><i class="fa fa-chevron-left"></i></a>
+            </div>
+        </header>
+
+
+
+        <table class="table">
+            <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ setting.id }}</td>
+            </tr>
+            <tr>
+                <th>Title</th>
+                <td>{{ setting.title }}</td>
+            </tr>
+            <tr>
+                <th>Keywords</th>
+                <td>{{ setting.keywords }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ setting.description }}</td>
+            </tr>
+            <tr>
+                <th>Brand</th>
+                <td>{{ setting.brand }}</td>
+            </tr>
+            <tr>
+                <th>Adress</th>
+                <td>{{ setting.adress }}</td>
+            </tr>
+            <tr>
+                <th>Phone</th>
+                <td>{{ setting.phone }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ setting.email }}</td>
+            </tr>
+            <tr>
+                <th>Fax</th>
+                <td>{{ setting.fax }}</td>
+            </tr>
+            <tr>
+                <th>Smtpserver</th>
+                <td>{{ setting.smtpserver }}</td>
+            </tr>
+            <tr>
+                <th>Smtpemail</th>
+                <td>{{ setting.smtpemail }}</td>
+            </tr>
+            <tr>
+                <th>Smtppassword</th>
+                <td>{{ setting.smtppassword }}</td>
+            </tr>
+            <tr>
+                <th>Smtpport</th>
+                <td>{{ setting.smtpport }}</td>
+            </tr>
+            <tr>
+                <th>Facebook</th>
+                <td>{{ setting.facebook }}</td>
+            </tr>
+            <tr>
+                <th>Instagram</th>
+                <td>{{ setting.instagram }}</td>
+            </tr>
+            <tr>
+                <th>Twitter</th>
+                <td>{{ setting.twitter }}</td>
+            </tr>
+            <tr>
+                <th>Aboutus</th>
+                <td>{{ setting.aboutus|raw }}</td>
+            </tr>
+            <tr>
+                <th>Contact</th>
+                <td>{{ setting.contact|raw }}</td>
+            </tr>
+            <tr>
+                <th>Reference</th>
+                <td>{{ setting.reference|raw }}</td>
+            </tr>
+            <tr>
+                <th>Status</th>
+                <td>{{ setting.status }}</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <div class="col md-2">
+            <a href="{{ path('admin_setting_index') }}"class="mb-xs mt-xs mr-xs btn btn-primary">back to list</a>
+        </div>
+        <div class="col md-2">
+            <a href="{{ path('admin_setting_edit',{'id': setting.id}) }}"class="mb-xs mt-xs mr-xs btn btn-primary">Edit</a>
+        </div>
+        <div class="col-sm-2">
+            {{ include('admin/setting/_delete_form.html.twig') }}
+        </div>
+        <!-- start: page -->
+        <!-- end: page -->
+    </section>
+
+{% endblock %}

@@ -1,0 +1,106 @@
+{% extends 'adminbase.html.twig' %}
+
+{% block title %}Product{% endblock %}
+
+{% block body %}
+    <section role="main" class="content-body">
+        <header class="page-header">
+            <h2>Product List</h2>
+
+            <div class="right-wrapper pull-right">
+                <ol class="breadcrumbs">
+                    <li>
+                        <a href="/admin">
+                            <i class="fa fa-home"></i>
+                        </a>
+                    </li>
+                    <li><span>Home</span></li>
+                    <li><span>Product</span></li>
+                </ol>
+
+                <a class="sidebar-right-toggle" data-open="sidebar-right"><i class="fa fa-chevron-left"></i></a>
+            </div>
+        </header>
+
+
+
+        <table class="table">
+            <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ product.id }}</td>
+            </tr>
+            <tr>
+                <th>Title</th>
+                <td>{{ product.title }}</td>
+            </tr>
+            <tr>
+                <th>Keywords</th>
+                <td>{{ product.keywords }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ product.description }}</td>
+            </tr>
+            <tr>
+                <th>Image</th>
+                <td><img src="{{ asset('uploads/images/'  ~ product.image) }}" height="100" ></td>
+            </tr>
+            <tr>
+                <th>Used_year</th>
+                <td>{{ product.usedYear }}</td>
+            </tr>
+            <tr>
+                <th>Purchase_price</th>
+                <td>{{ product.purchasePrice }}</td>
+            </tr>
+            <tr>
+                <th>Sale_price</th>
+                <td>{{ product.salePrice }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ product.email }}</td>
+            </tr>
+            <tr>
+                <th>Phone</th>
+                <td>{{ product.phone }}</td>
+            </tr>
+            <tr>
+                <th>Adress</th>
+                <td>{{ product.adress }}</td>
+            </tr>
+            <tr>
+                <th>Status</th>
+                <td>{{ product.status }}</td>
+            </tr>
+            <tr>
+                <th>Created_at</th>
+                <td>{{ product.createdAt ? product.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Updated_at</th>
+                <td>{{ product.updatedAt ? product.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="row">
+            <div class="col md-2">
+                <a href="{{ path('admin_product_index') }}"class="mb-xs mt-xs mr-xs btn btn-success">back to list</a>
+            </div>
+            <div class="col md-2">
+                <a href="{{ path('admin_product_edit',{'id': product.id}) }}"class="mb-xs mt-xs mr-xs btn btn-success">Edit</a>
+            </div>
+
+        </div>
+        <div class="col-sm-2">
+            {{ include('admin/product/_delete_form.html.twig') }}
+        </div>
+
+
+
+        <!-- start: page -->
+        <!-- end: page -->
+    </section>
+
+{% endblock %}

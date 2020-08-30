@@ -1,0 +1,119 @@
+<div class="inner-wrapper">
+    <!-- start: sidebar -->
+    <aside id="sidebar-left" class="sidebar-left">
+
+        <div class="sidebar-header">
+            <div class="sidebar-title">
+                Menu
+            </div>
+            <div class="sidebar-toggle hidden-xs" data-toggle-class="sidebar-left-collapsed" data-target="html" data-fire-event="sidebar-left-toggle">
+                <i class="fa fa-bars" aria-label="Toggle sidebar"></i>
+            </div>
+        </div>
+
+        <div class="nano">
+            <div class="nano-content">
+                <nav id="menu" class="nav-main" role="navigation">
+                    <ul class="nav nav-main">
+                        <li>
+                            <a href="/admin">
+                                <i class="fa fa-home" aria-hidden="true"></i>
+                                <span>Cabin Admin</span>
+                            </a>
+                        </li>
+                        <li class="nav-parent">
+                            <a>
+                                <i class="fa fa-shopping-cart"></i>
+                                <span>Shopping Cart</span>
+                            </a>
+
+                            <ul class="nav nav-children">
+                                <li>
+                                    <a href="forms-basic.html">
+                                        New
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="forms-advanced.html">
+                                        Accepted
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="forms-validation.html">
+                                        Canceled
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="forms-layouts.html">
+                                        Completed
+                                    </a>
+                                </li>
+                            </ul>
+
+                        </li>
+
+                        <li >
+                            <a href="/admin/category">
+                                <i class="fa fa-list-alt" aria-hidden="true"></i>
+                                <span>Category</span>
+                            </a>
+                        </li>
+                        <li >
+                            <a href="/admin/product">
+                                <i class="fa fa-magnet"></i>
+                                <span>Product</span>
+                            </a>
+                        </li>
+                        <li >
+                            <a href="/admin/user">
+                                <i class="fa fa-user"></i>
+                                <span>Users</span>
+                            </a>
+                        </li>
+                        <li >
+                            <a href="/admin/image">
+                                <i class="fa fa-file-photo-o"></i>
+                                <span>Images</span>
+                            </a>
+                        </li>
+                        <li >
+                            <a href="/admin/messages">
+                                <i class="fa fa-envelope"></i>
+                                <span>Contact Messages</span>
+                            </a>
+                        </li>
+                        <li >
+                            <a href="/admin/comment">
+                                <i class="fa fa-comment"></i>
+                                <span>User Comments</span>
+                            </a>
+                        </li>
+                        <li >
+                            <a>
+                                <i class="fa fa-question-circle"></i>
+                                <span>Faq</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </nav>
+
+                <hr class="separator" />
+
+                <div class="sidebar-widget widget-tasks">
+                    <div class="widget-header">
+                        <h4>General</h4>
+                        <div class="widget-toggle">+</div>
+                    </div>
+                    <div class="widget-content">
+                        <ul class="list-unstyled m-none">
+                            <li><a href="{{path('admin_setting_index')}}">Settings</a></li>
+                            <li><a href="#">Warning</a></li>
+                            <li><a href="#">Information</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <!-- end: sidebar -->
